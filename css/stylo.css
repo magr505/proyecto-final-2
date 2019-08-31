@@ -1,0 +1,280 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  clear: both;
+}
+
+header {
+  background-color: chocolate;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 4px 6px rgba(78, 78, 78, 0.4);
+  z-index: 1;
+}
+
+.main {
+  width: 90%;
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.contenido {
+  width: 100%;
+  height: 100%;
+}
+
+.lateral {
+  width: 22%;
+  height: 580px;
+  vertical-align: top;
+  background-color: bisque;
+  justify-content: space-between;
+  display: flex;
+  position: sticky;
+  top: 60px;
+  z-index: 0;
+  /*justify-content: space-between;
+  display: flex;
+  position: sticky;
+  top: 50p;
+  box-shadow: 0px 4px 6px rgba(78, 78, 78, 0.4);
+  z-index: 1;*/
+}
+.lateral .categorias, .lateral .registrarse, .lateral .destacados {
+  font-size: 12px;
+  color: dimgray;
+  text-align: left;
+  line-height: 20px;
+  font-family: sans-serif;
+  margin: 6px;
+  padding: 5px;
+  vertical-align: top;
+}
+
+.principal, .lateral {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.principal {
+  width: 77.6%;
+  height: 100%;
+  box-sizing: content-box;
+}
+.principal .arriba {
+  background-image: url(https://i.kinja-img.com/gawker-media/image/upload/s--VirEYsaM--/c_scale,f_auto,fl_progressive,q_80,w_800/cxyp7qifwkhx1l4xtzhl.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.principal .arriba .informacion1 {
+  width: 100%;
+}
+.principal .arriba .informacion1 .inf, .principal .arriba .informacion1 .muestra {
+  width: 49.5%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.principal .arriba .informacion1 .inf .titulo-inf {
+  color: dimgray;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+}
+.principal .arriba .informacion1 .inf p {
+  font-size: 1.3rem;
+  color: dimgray;
+  text-align: left;
+  line-height: 28px;
+  font-family: sans-serif;
+  margin: 6px;
+  padding: 3rem;
+}
+.principal .arriba .informacion1 .muestra {
+  height: 450px;
+}
+.principal .medio {
+  height: 100%;
+}
+.principal .medio .consolas {
+  width: 100%;
+}
+.principal .medio .consolas .tipo-consola {
+  width: 21%;
+  height: 100%;
+  display: inline-block;
+  margin: 1rem;
+  vertical-align: top;
+  box-shadow: 0px 4px 4px rgba(78, 78, 78, 0.4);
+}
+.principal .medio .consolas .tipo-consola .titulo-consola {
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  background-color: blueviolet;
+  padding: 1rem;
+}
+.principal .medio .consolas .tipo-consola .logo-consola {
+  width: 100%;
+  height: 100px;
+  vertical-align: top;
+}
+.principal .medio .consolas .tipo-consola .descripcion-breve {
+  font-size: 1rem;
+  color: dimgray;
+  text-align: left;
+  line-height: 28px;
+  font-family: sans-serif;
+  margin: 6px;
+  padding: 1rem;
+}
+.principal .abajo .tipo-otro {
+  width: 49.5%;
+  height: 100%;
+  display: inline-block;
+  margin: 1rem;
+  vertical-align: top;
+  margin-left: 0;
+  margin-right: 0;
+  box-shadow: 0px 4px 4px rgba(78, 78, 78, 0.4);
+}
+.principal .abajo .tipo-otro .titulo-otro {
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 15px;
+  background-color: blueviolet;
+  padding: 2px;
+  margin-bottom: 0px;
+}
+.principal .abajo .tipo-otro .logo-otro {
+  width: 55%;
+  height: 140px;
+  background-color: #5ce3b6;
+  vertical-align: top;
+  margin-bottom: 0px;
+}
+.principal .abajo .tipo-otro .descripcion-otro {
+  width: 42%;
+  float: right;
+  margin-bottom: 0px;
+  font-size: 12px;
+  color: dimgray;
+  text-align: left;
+  line-height: 18px;
+  font-family: sans-serif;
+  margin: 6px;
+  padding: 3px;
+}
+
+footer {
+  background-color: chocolate;
+}
+footer .pie {
+  text-align: center;
+  width: 100%;
+  vertical-align: middle;
+}
+footer .pie .fin {
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  background-color: bisque;
+}
+footer .pie .pies {
+  display: inline-block;
+  padding: 2rem;
+}
+footer .pie .pies .titulo-pie {
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+}
+footer .pie .pies .lista-pie {
+  margin: 1rem;
+  padding: 1rem;
+}
+footer .pie .pies .lista-pie li a {
+  color: white;
+  font-size: 1.4rem;
+}
+footer .fin {
+  text-shadow: 1px 2px 3px #4e4e4e;
+}
+
+@media (max-width: 480px) {
+  .main {
+    width: 100%;
+  }
+  .main .arriba {
+    width: 100%;
+  }
+  .main .arriba .informacion1 {
+    width: 100%;
+  }
+  .main .arriba .informacion1 .inf, .main .arriba .informacion1 .muestra {
+    width: 100%;
+  }
+  .main .medio {
+    width: 100%;
+  }
+  .main .medio .informacion2 {
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .main .medio .informacion2 .inf {
+    width: 100%;
+  }
+  .main .medio .informacion2 .inf .titulo-inf {
+    color: dimgray;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+  }
+  .main .medio .informacion2 .inf p {
+    font-size: 1.3rem;
+    color: dimgray;
+    text-align: left;
+    line-height: 28px;
+    font-family: sans-serif;
+    margin: 6px;
+    padding: 3rem;
+  }
+  .main .consolas {
+    width: 100%;
+    display: block;
+  }
+  .main .consolas .tipo-consola {
+    width: 90%;
+    height: 22rem;
+    display: inline-block;
+    margin: 1rem;
+    vertical-align: top;
+  }
+  .main .consolas .tipo-consola .descripcion-breve {
+    font-size: 1rem;
+    color: dimgray;
+    text-align: left;
+    line-height: 28px;
+    font-family: sans-serif;
+    margin: 6px;
+    padding: 1rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 720px) {
+  .main {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=stylo.css.map */
