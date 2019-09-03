@@ -33,6 +33,8 @@ $pc:1024px;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    -moz-box-sizing: border-box ;
+    -webkit-box-sizing: border-box ;
     //overflow: hidden;
     clear: both;
 }
@@ -51,14 +53,13 @@ header{
 }
 .main{
     @include tamano($ancho:90%);
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: auto;
 }
 .contenido{
     @include tamano();
 }
 .lateral{
-    @include tamano($ancho:22%,$largo:580px);
+    @include tamano($ancho:22%);
     vertical-align: top;
     background-color: bisque;
     justify-content: space-between;
@@ -69,6 +70,37 @@ header{
     .categorias,.registrarse,.destacados{
         @include escritura($fcolor:dimgray,$fsize:12px,$pad:5px,$line:20px);
         vertical-align: top;
+    }
+    .registrarse{
+        width: 100%;
+        border: 1px solid gray;
+        margin: 0;
+        .titulo{
+            @include titulos();
+        }
+        .formulario{
+            display: flex;
+            flex-wrap: wrap;
+            //justify-content: space-between;
+            input[type="text"],input[type="password"],input[type="email"]{
+                border: 2px solid #cecece;
+                border-radius: 5px;
+                padding: 5px 10px;
+                font-size: 15px;
+                color: #a4a4a4;
+            }
+            input[type="text"],input[type="password"],input[type="email"]{
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .boton{
+                margin: auto;
+                background: #3895ea;
+                color: #fff;
+                border-radius: 3px;
+                padding: 6px 40px;
+            }
+        }
     }
     /*justify-content: space-between;
     display: flex;
@@ -87,9 +119,9 @@ header{
     //overflow:scroll;
     
     .arriba{
-        background-image: url(https://i.kinja-img.com/gawker-media/image/upload/s--VirEYsaM--/c_scale,f_auto,fl_progressive,q_80,w_800/cxyp7qifwkhx1l4xtzhl.jpg);
-        background-repeat: no-repeat;
-        background-size:cover;
+        //background-image: url(https://i.kinja-img.com/gawker-media/image/upload/s--VirEYsaM--/c_scale,f_auto,fl_progressive,q_80,w_800/cxyp7qifwkhx1l4xtzhl.jpg);
+        //background-repeat: no-repeat;
+        //background-size:cover;
         .informacion1{
         width: 100%;
         .inf,.muestra{
@@ -106,7 +138,40 @@ header{
             }
         }
         .muestra{
-            height: 450px;
+            .titulo{
+                @include titulos();
+            }
+            .formulario{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                input[type="text"],input[type="email"], textarea{
+                    border: 2px solid #cecece;
+                    border-radius: 5px;
+                    padding: 10px 15px;
+                    font-size: 20px;
+                    color: #a4a4a4;
+                }
+                input[type="text"],input[type="email"]{
+                    width: 49%;
+                    margin-bottom: 15px;
+                }
+                textarea{
+                    width: 100%;
+                    height: 100%;
+                    min-width: 100%;
+                    margin-bottom: 15px;
+                    min-height: 100px;
+                    max-height: 150px;
+                }
+                .boton{
+                    margin: auto;
+                    background: #3895ea;
+                    color: #fff;
+                    border-radius: 3px;
+                    padding: 15px 40px;
+                }
+            }
             }
         }
     }
@@ -119,7 +184,7 @@ header{
             box-shadow: 0px 4px 4px rgba(78, 78, 78, 0.4);
             .titulo-consola{
                 @include titulos($fcolor:white,$ftam:1.3rem);
-                background-color: blueviolet;
+                background-color: #e3c2a7;
                 padding: 1rem;
             }
             .logo-consola{
@@ -141,14 +206,14 @@ header{
             box-shadow: 0px 4px 4px rgba(78, 78, 78, 0.4);
             .titulo-otro{
                 @include titulos($fcolor:white,$ftam:15px);
-                background-color: blueviolet;
+                background-color: #e3c2a7;
                 padding: 2px;
                 margin-bottom: 0px;
             }
             .logo-otro{
                 width: 55%;
                 height: 140px;
-                background-color: #5ce3b6;
+                background-color: #e3c2a7;
                 vertical-align: top;
                 margin-bottom: 0px;
             }
@@ -193,46 +258,69 @@ footer{
 }
 
 @media (max-width: $smart){
-   
-        .main{
-    width: 100%;
-    .arriba{
-    width: 100%;
-    .informacion1{
-        width: 100%;
-        .inf,.muestra{
-            width: 100%;
-        }
-        }
-    }
-    .medio{
-        width: 100%;
-        .informacion2{
-            width: 100%;
-            margin-top: 3rem;
-            margin-bottom: 3rem;
-            .inf{
-                width: 100%;
-                .titulo-inf{
-                    @include titulos();
-                }
-                p{
-                    @include escritura();
-                }
-            }
-        }
-    }
-    .consolas{
-        width: 100%;
+    .lateral{
+    @include tamano($ancho:100%);
+        position: relative;
+        top: auto;
         display: block;
-        .tipo-consola{
-            @include consola($tam:90%);
-            .descripcion-breve{
-                @include escritura($fsize:1rem,$pad:1rem);
-            }
-        }
+    .categorias,.registrarse,.destacados{
+        @include escritura($fcolor:dimgray,$fsize:15px,$pad:5px,$line:20px);
+        vertical-align: top;
+        margin: 0;
     }
 }
+    .principal{
+        width: 100%;
+        .arriba{
+            width: 100%;
+            background: none;
+            .informacion1{
+                width: 100%;
+                .inf{
+                    width: 100%;
+                    p {
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+                .muestra{
+                    width: 100%;
+                    margin: 8px 0;
+                }
+            }
+        }
+        .medio{
+            width: 100%;
+            .consolas{
+                width: 100%;
+                .tipo-consola{
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .abajo{
+        width: 100%;
+        .otros{
+            width: 100%;
+            .tipo-otro{
+                width: 100%;
+                .logo-otro{
+                    width: 100%;
+                    min-width: 50%;
+                }
+                .descripcion-otro{
+                    width: 100%;
+                    margin: 0;
+                    padding: 0 8px;
+                }
+            }
+        }
+    }
+    footer{
+
+    }
 }
 @media (min-width: $smart+1) and (max-width: $tablet){
     .main{
