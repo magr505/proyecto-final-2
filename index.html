@@ -54,17 +54,18 @@
         <section class="contenido">
             <aside class="lateral">
                 <div class="registrarse">
-                <h3>Registrarse</h3>
-                <nav>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-gamepad size:7x"></i>Video Juegos</a></li>
-                        <li><a href="#">Peliculas</a></li>
-                        <li><a href="#"><i class="fas fa-music">Musica</i></a></li>
-                        <li><a href="#">Series</a></li>
-                        <li><a href="#">Anime</a></li>
-                        <li><a href="#">Farandula</a></li>
-                    </ul>
-                </nav>
+                        <h3 class="titulo">
+                            Registrarse
+                        </h3>
+                        <form class="formulario" action="">
+                            <input type="text" placeholder="nombre">
+                            <input type="password" placeholder="contraseña">
+                            <input type="email" placeholder="correo">
+                            <input type="submit" class="boton" value="unete ahora">
+                            <p>Al registrarme, acepto los <a><strong>Términos de uso y la Política de privacidad</strong></a> .</p>
+                            <input type="checkbox" class="check" value="check">
+                            <p>Al hacer clic aquí, acepto recibir correos electrónicos periódicos con ofertas y mensajes promocionales de marketing de Magr.</p>
+                        </form>
 
                 </div>
                 <div class="categorias">
@@ -103,7 +104,18 @@
                      <h1 class="titulo-inf">Lorem ipsum dolor sit amet.</h1>
                       <p>MAGR es tu sitio web sobre videojuegos, consolas y entretenimiento, con toda la información sobre juegos, cine, series y TV y cómics.La web de videojuegos que te ofrece todas las novedades, análisis, imágenes y vídeos que buscas, de forma completamente imparcial y crítica</p>
                   </div>
-                      <img src="img/images.jpg" alt="crahs" class="muestra">
+                    <div class="muestra">
+                        <h1 class="titulo">
+                            Registrarse
+                        </h1>
+                        <form class="formulario" action="">
+                            <input type="text" placeholder="nombre">
+                            <input type="email" placeholder="correo">
+                            <textarea name="mensaje" id="" cols="30" rows="10" placeholder="mensaje"></textarea>
+                            <input type="submit" class="boton" value="enviar">
+                        </form>
+                    </div>
+                      <!--<img src="img/images.jpg" alt="crahs" class="muestra">-->
                   </div>
             </section>
             <section class="medio">
@@ -132,7 +144,7 @@
                   <div class="row">
 			<div class="col">
 				<div class="carousel slide" id="slideshow" data-ride="carousel">
-					<!-- Indicadores -->
+					<!-- Indicadores
 					<ol class="carousel-indicators">
 						<li data-target="#slideshow" class="active" data-slide-to="0"></li>
 						<li data-target="#slideshow" data-slide-to="1"></li>
@@ -253,7 +265,5 @@
 <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <!-- production version, optimized for size and speed -->
-        <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
 </body>
 </html>
