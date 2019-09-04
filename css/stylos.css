@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+header {
+  background-color: chocolate;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 4px 6px rgba(78, 78, 78, 0.4);
+  z-index: 1;
+}
+
+.main, .contenido, .principal, .arriba, .abajo, .otros, .medio, .informacion1, .consolas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main {
+  width: 95%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+.main .contenido {
+  width: 100%;
+}
+.main .contenido .lateral {
+  background-color: bisque;
+  padding: 5px;
+  width: 25%;
+  height: 900px;
+}
+.main .contenido .lateral .registrarse, .main .contenido .lateral .categorias, .main .contenido .lateral .destacados {
+  width: 100%;
+}
+.main .contenido .lateral .formulario {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main .contenido .lateral .formulario .titulo {
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  width: 100%;
+  background-color: rgba(205, 205, 205, 0.5);
+  text-shadow: 1px 2px 2px #646464;
+}
+.main .contenido .lateral .formulario input[type=text], .main .contenido .lateral .formulario input[type=password], .main .contenido .lateral .formulario input[type=email] {
+  width: 100%;
+}
+.main .contenido .lateral .categorias {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main .contenido .lateral .categorias h3 {
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  width: 100%;
+  background-color: rgba(205, 205, 205, 0.5);
+  text-shadow: 1px 2px 2px #646464;
+}
+.main .contenido .lateral .categorias nav {
+  width: 100%;
+}
+.main .contenido .lateral .categorias nav ul {
+  width: 100%;
+}
+.main .contenido .lateral .categorias nav ul li {
+  width: 100%;
+}
+.main .contenido .lateral .categorias nav ul li a {
+  font-size: 1em;
+  color: dimgray;
+  text-align: left;
+  line-height: 20px;
+  font-family: sans-serif;
+  margin: 6px;
+  padding: 5px;
+}
+.main .contenido .lateral .categorias nav ul li a i {
+  font-size: 1.5em;
+  color: #34ce57;
+}
+.main .contenido .lateral .categorias input[type=text], .main .contenido .lateral .categorias input[type=password], .main .contenido .lateral .categorias input[type=email] {
+  width: 100%;
+}
+.main .contenido .lateral .destacados {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main .contenido .lateral .destacados h3 {
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  width: 100%;
+  background-color: rgba(205, 205, 205, 0.5);
+  text-shadow: 1px 2px 2px #646464;
+}
+.main .contenido .lateral .destacados nav {
+  width: 100%;
+}
+.main .contenido .lateral .destacados nav ul {
+  width: 100%;
+}
+.main .contenido .lateral .destacados nav ul li {
+  width: 100%;
+  border-bottom: solid black 1px;
+}
+.main .contenido .lateral .destacados nav ul li a {
+  width: 100%;
+  font-size: 14px;
+  color: dimgray;
+  text-align: left;
+  line-height: 20px;
+  font-family: sans-serif;
+  margin: 6px;
+  padding: 0px;
+}
+.main .contenido .principal {
+  width: 75%;
+  padding: 8px;
+}
+.main .contenido .principal .arriba {
+  width: 100%;
+}
+.main .contenido .principal .arriba .informacion1 {
+  width: 100%;
+}
+.main .contenido .principal .arriba .informacion1 .titulo-inf {
+  width: 100%;
+  color: dimgray;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+}
+.main .contenido .principal .arriba .informacion1 p {
+  width: 100%;
+  font-size: 1em;
+  color: dimgray;
+  text-align: left;
+  line-height: 20px;
+  font-family: sans-serif;
+  margin: 6px;
+  padding: 5px;
+}
+.main .contenido .principal .arriba .informacion1 .inf, .main .contenido .principal .arriba .informacion1 .muestra {
+  width: 50%;
+}
+.main .contenido .principal .arriba .informacion1 .muestra .titulo {
+  width: 100%;
+  color: dimgray;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  text-shadow: 1px 2px 2px #646464;
+}
+.main .contenido .principal .medio {
+  width: 100%;
+}
+.main .contenido .principal .medio .consolas {
+  width: 100%;
+}
+.main .contenido .principal .medio .consolas .tipo-consola {
+  width: 22.5%;
+}
+.main .contenido .principal .medio .consolas .tipo-consola .logo-consola, .main .contenido .principal .medio .consolas .tipo-consola .titulo-consola, .main .contenido .principal .medio .consolas .tipo-consola .descripcion-breve {
+  width: 100%;
+}
+.main .contenido .principal .medio .consolas .tipo-consola .titulo-consola {
+  color: dimgray;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  text-shadow: 1px 2px 2px #646464;
+}
+.main .contenido .principal .medio .row {
+  margin: auto;
+  width: 100%;
+}
+.main .contenido .principal .abajo {
+  width: 100%;
+}
+.main .contenido .principal .abajo .otros {
+  width: 100%;
+}
+.main .contenido .principal .abajo .otros .tipo-otro {
+  width: 49%;
+}
+.main .contenido .principal .abajo .otros .tipo-otro .titulo-otro, .main .contenido .principal .abajo .otros .tipo-otro .logo-otro, .main .contenido .principal .abajo .otros .tipo-otro .descripcion-otro {
+  width: 100%;
+}
+.main .contenido .principal .abajo .otros .tipo-otro .titulo-otro {
+  margin-top: 5px;
+  margin-bottom: 0;
+  background-color: rgba(205, 205, 205, 0.5);
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  text-shadow: 1px 2px 2px #646464;
+}
+.main .contenido .principal .abajo .otros .tipo-otro .descripcion-otro {
+  font-size: 1em;
+  color: dimgray;
+  text-align: left;
+  line-height: 20px;
+  font-family: sans-serif;
+  margin: 6px;
+  padding: 5px;
+}
+
+footer {
+  background-color: chocolate;
+}
+footer .pie {
+  text-align: center;
+  width: 100%;
+  vertical-align: middle;
+}
+footer .pie .fin {
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  background-color: bisque;
+}
+footer .pie .pies {
+  display: inline-block;
+  padding: 2rem;
+}
+footer .pie .pies .titulo-pie {
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+}
+footer .pie .pies .lista-pie {
+  margin: 1rem;
+  padding: 1rem;
+}
+footer .pie .pies .lista-pie li a {
+  color: white;
+  font-size: 1.4rem;
+}
+footer .fin {
+  text-shadow: 1px 2px 3px #4e4e4e;
+}
+
+@media (max-width: 480px) {
+  .main .contenido .lateral {
+    width: 100%;
+    text-align: center;
+  }
+  .main .contenido .principal {
+    width: 100%;
+  }
+  .main .contenido .principal .arriba {
+    width: 100%;
+  }
+  .main .contenido .principal .arriba .informacion1 {
+    width: 100%;
+  }
+  .main .contenido .principal .arriba .informacion1 .inf {
+    width: 100%;
+  }
+  .main .contenido .principal .arriba .informacion1 .inf p {
+    padding: 0;
+  }
+  .main .contenido .principal .arriba .informacion1 .muestra {
+    width: 100%;
+  }
+  .main .contenido .principal .medio .consolas .tipo-consola {
+    width: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 820px) {
+  .main {
+    width: 100%;
+  }
+  .main .contenido .lateral {
+    padding: 5px;
+    width: 25%;
+    min-width: 24%;
+  }
+  .main .contenido .lateral .registrarse {
+    min-width: 24%;
+  }
+  .main .contenido .lateral .registrarse .formulario {
+    padding: 0;
+    margin: 0;
+    color: dimgray;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1rem;
+  }
+  .main .contenido .principal {
+    width: 75%;
+  }
+  .main .contenido .principal .arriba {
+    width: 100%;
+  }
+  .main .contenido .principal .arriba .informacion1 {
+    width: 100%;
+  }
+  .main .contenido .principal .arriba .informacion1 .inf {
+    width: 100%;
+  }
+  .main .contenido .principal .arriba .informacion1 .inf p {
+    padding: 0;
+  }
+  .main .contenido .principal .arriba .informacion1 .muestra {
+    width: 100%;
+  }
+  .main .contenido .principal .medio .consolas .tipo-consola {
+    width: 50%;
+  }
+
+  footer .pie .pies {
+    padding: 5px;
+    margin: 0;
+  }
+  footer .pie .pies .lista-pie {
+    padding: 5px;
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=stylos.css.map */

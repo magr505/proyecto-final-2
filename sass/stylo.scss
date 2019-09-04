@@ -68,8 +68,11 @@ header{
     top: 60px;
     z-index: 0;
     .categorias,.registrarse,.destacados{
-        @include escritura($fcolor:dimgray,$fsize:12px,$pad:5px,$line:20px);
+        @include escritura($fcolor:dimgray,$fsize:16px,$pad:4px,$line:18px);
         vertical-align: top;
+      a{
+        color: dimgray;
+      }
     }
     .registrarse{
         width: 100%;
@@ -81,6 +84,7 @@ header{
         .formulario{
             display: flex;
             flex-wrap: wrap;
+            padding: 5px;
             //justify-content: space-between;
             input[type="text"],input[type="password"],input[type="email"]{
                 border: 2px solid #cecece;
@@ -99,6 +103,7 @@ header{
                 color: #fff;
                 border-radius: 3px;
                 padding: 6px 40px;
+                border-radius: 15px;
             }
         }
     }
@@ -193,7 +198,7 @@ header{
                 vertical-align: top;
             }
             .descripcion-breve{
-                @include escritura($fsize:1rem,$pad:1rem);
+                @include escritura($fsize:1rem,$pad:5pxsa);
             }
         }
     }
@@ -323,9 +328,76 @@ footer{
     }
 }
 @media (min-width: $smart+1) and (max-width: $tablet){
-    .main{
+  .lateral{
+    @include tamano($ancho:30%);
+   /* position: relative;
+    top: auto;
+    display: block;
+    .categorias,.registrarse,.destacados{
+      @include escritura($fcolor:dimgray,$fsize:15px,$pad:5px,$line:20px);
+      vertical-align: top;
+      margin: 0;
+    }*/
+ }
+  .lateral,.principal{
+    display: inline-block;
+  }
+  .principal{
+    float: right;
+    @include tamano($ancho:70%);
+    .arriba{
+      width: 100%;
+      display: inline-flex;
+      .informacion1{
         width: 100%;
+        padding-left: 10px;
+        .inf{
+          width: 100%;
+          p {
+            padding: 0;
+            margin: 0;
+          }
+        }
+        .muestra{
+          width: 100%;
+          margin: 8px 0;
+        }
+      }
     }
+    .medio{
+      width: 100%;
+      padding-left: 10px;
+      .consolas{
+        width: 100%;
+        .tipo-consola{
+          width: 49%;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .abajo{
+    width: 100%;
+    padding-left: 10px;
+    .otros{
+      width: 100%;
+      .tipo-otro{
+        width: 100%;
+        .logo-otro{
+          width: 100%;
+          min-width: 50%;
+        }
+        .descripcion-otro{
+          width: 100%;
+          margin: 0;
+          padding: 0 8px;
+        }
+      }
+    }
+  }
+  footer{
+
+  }
 }
 @media (min-width: $tablet+1) and (max-width: $pc){
     

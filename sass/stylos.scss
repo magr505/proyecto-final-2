@@ -1,0 +1,337 @@
+$smart:480px;
+$tablet:820px;
+$pc:1024px;
+@mixin escritura($fcolor:dimgray,$fsize:1.3rem,$pad:3rem,$line:28px){
+  font-size: $fsize;
+  color: $fcolor;
+  text-align: left;
+  line-height: $line;
+  font-family: sans-serif;
+  margin: 6px;
+  padding: $pad;
+}
+@mixin titulos($fcolor:dimgray,$ftam:1.6rem){
+  color: $fcolor;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: $ftam;
+}
+@mixin consola($tam:100%,$height:22rem){
+  width: $tam;
+  height: $height;
+  display: inline-block;
+  margin: 1rem;
+  vertical-align: top;
+}
+*{
+  margin:0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box ;
+  -webkit-box-sizing: border-box ;
+}
+body{
+  background: #ffffff;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+}
+header{
+  background-color: chocolate;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 4px 6px rgba(78, 78, 78, 0.4);
+  z-index: 1;
+}
+.main,.contenido,.principal,.arriba,.abajo,.otros,.medio,.informacion1,.consolas{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main{
+  width: 95%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  .contenido{
+    width: 100%;
+    .lateral{
+      background-color: bisque;
+      padding: 5px;
+      width: 25%;
+      height: 900px;
+      .registrarse,.categorias,.destacados{
+        width: 100%;
+      }
+      .formulario{
+        padding: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .titulo{
+          @include titulos($ftam:1.2rem,$fcolor:white);
+          width: 100%;
+          background-color: rgba(205,205,205,0.5);
+          text-shadow: 1px 2px 2px rgba(100,100,100,1);
+        }
+        input[type="text"],input[type="password"],input[type="email"]{
+          width: 100%;
+        }
+      }
+      .categorias{
+        padding: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        h3{
+          @include titulos($ftam:1.2rem,$fcolor:white);
+          width: 100%;
+          background-color: rgba(205,205,205,0.5);
+          text-shadow: 1px 2px 2px rgba(100,100,100,1);
+        }
+        nav{
+          width: 100%;
+          ul{
+            width: 100%;
+            li{
+              width: 100%;
+              a{
+                @include escritura($pad:5px,$line:20px,$fsize:1em);
+                i{
+                  font-size: 1.5em;
+                  color: #34ce57;
+                }
+              }
+            }
+          }
+        }
+        input[type="text"],input[type="password"],input[type="email"]{
+          width: 100%;
+        }
+      }
+      .destacados{
+        padding: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        h3{
+          @include titulos($ftam:1.2rem,$fcolor:white);
+          width: 100%;
+          background-color: rgba(205,205,205,0.5);
+          text-shadow: 1px 2px 2px rgba(100,100,100,1);
+        }
+        nav{
+          width: 100%;
+          ul{
+            width: 100%;
+            li{
+              width: 100%;
+              border-bottom: solid black 1px;
+              a{
+                width: 100%;
+                @include escritura($pad:0px,$line:20px,$fsize:14px);
+              }
+            }
+          }
+        }
+      }
+    }
+    .principal{
+      width: 75%;
+      padding: 8px;
+      .arriba{
+        width: 100%;
+        .informacion1{
+          width: 100%;
+          .titulo-inf{
+            width: 100%;
+            @include titulos($ftam:1.2rem);
+          }
+          p{
+            width: 100%;
+            @include escritura($pad:5px,$line:20px,$fsize:1em);
+          }
+          .inf,.muestra{
+            width: 50%;
+          }
+          .muestra{
+            .titulo{
+              width: 100%;
+              @include titulos($ftam:1.2rem);
+              text-shadow: 1px 2px 2px rgba(100,100,100,1);
+            }
+          }
+        }
+      }
+      .medio{
+        width: 100%;
+        .consolas{
+          width: 100%;
+          .tipo-consola{
+            width: 22.5%;
+            .logo-consola,.titulo-consola,.descripcion-breve{
+              width: 100%;
+            }
+            .titulo-consola{
+              @include titulos($ftam:1.2rem);
+              text-shadow: 1px 2px 2px rgba(100,100,100,1);
+            }
+          }
+        }
+        .row{
+          margin: auto;
+          width: 100%;
+        }
+      }
+      .abajo{
+        width: 100%;
+        .otros{
+          width: 100%;
+          .tipo-otro{
+            width: 49%;
+            .titulo-otro,.logo-otro,.descripcion-otro{
+              width: 100%;
+            }
+            .titulo-otro{
+              margin-top: 5px;
+              margin-bottom: 0;
+              background-color: rgba(205,205,205,0.5);
+              @include titulos($ftam:1.2rem,$fcolor: white);
+              text-shadow: 1px 2px 2px rgba(100,100,100,1);
+            }
+            .descripcion-otro{
+              @include escritura($fsize:1em,$pad:5px,$line:20px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+footer{
+  background-color: chocolate;
+  .pie{
+    text-align: center;
+    .fin{
+      @include titulos($fcolor:white);
+      background-color: bisque;
+    }
+    width: 100%;
+    vertical-align: middle;
+    .pies{
+      display: inline-block;
+      padding: 2rem;
+      .titulo-pie{
+        @include titulos($fcolor:white);
+      }
+      .lista-pie{
+        margin: 1rem;
+        padding: 1rem;
+        li a{
+          color: white;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+  .fin{
+    text-shadow: 1px 2px 3px rgba(78, 78, 78, 1);
+  }
+}
+@media (max-width: $smart){
+  .main{
+    .contenido{
+      .lateral{
+        width: 100%;
+        text-align: center;
+      }
+      .principal{
+        width: 100%;
+        .arriba{
+          width: 100%;
+          .informacion1{
+            width: 100%;
+            .inf{
+              width: 100%;
+              p{
+                padding: 0;
+              }
+            }
+            .muestra{
+              width: 100%;
+            }
+          }
+        }
+        .medio{
+          .consolas{
+            .tipo-consola{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $smart+1) and (max-width: $tablet){
+  .main{
+    width: 100%;
+    .contenido{
+      .lateral{
+        padding: 5px;
+        width: 25%;
+        min-width: 24%;
+        .registrarse{
+          min-width: 24%;
+          .formulario{
+            padding: 0;
+            margin: 0;
+            @include titulos($ftam:1rem);
+          }
+        }
+      }
+      .principal{
+        width: 75%;
+        .arriba{
+          width: 100%;
+          .informacion1{
+            width: 100%;
+            .inf{
+              width: 100%;
+              p{
+                padding: 0;
+              }
+            }
+            .muestra{
+              width: 100%;
+            }
+          }
+        }
+        .medio{
+          .consolas{
+            .tipo-consola{
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer{
+    .pie{
+      .pies{
+        padding: 5px;
+        margin: 0;
+        .lista-pie{
+          padding: 5px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

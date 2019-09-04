@@ -49,14 +49,17 @@ header {
   z-index: 1;*/
 }
 .lateral .categorias, .lateral .registrarse, .lateral .destacados {
-  font-size: 12px;
+  font-size: 16px;
   color: dimgray;
   text-align: left;
-  line-height: 20px;
+  line-height: 18px;
   font-family: sans-serif;
   margin: 6px;
-  padding: 5px;
+  padding: 4px;
   vertical-align: top;
+}
+.lateral .categorias a, .lateral .registrarse a, .lateral .destacados a {
+  color: dimgray;
 }
 .lateral .registrarse {
   width: 100%;
@@ -72,6 +75,7 @@ header {
 .lateral .registrarse .formulario {
   display: flex;
   flex-wrap: wrap;
+  padding: 5px;
 }
 .lateral .registrarse .formulario input[type=text], .lateral .registrarse .formulario input[type=password], .lateral .registrarse .formulario input[type=email] {
   border: 2px solid #cecece;
@@ -90,6 +94,7 @@ header {
   color: #fff;
   border-radius: 3px;
   padding: 6px 40px;
+  border-radius: 15px;
 }
 
 .principal, .lateral {
@@ -196,7 +201,7 @@ header {
   line-height: 28px;
   font-family: sans-serif;
   margin: 6px;
-  padding: 1rem;
+  padding: 5pxsa;
 }
 .principal .abajo .tipo-otro {
   width: 49.5%;
@@ -346,8 +351,77 @@ footer .fin {
   }
 }
 @media (min-width: 481px) and (max-width: 720px) {
-  .main {
+  .lateral {
+    width: 30%;
+    height: 100%;
+    /* position: relative;
+     top: auto;
+     display: block;
+     .categorias,.registrarse,.destacados{
+       @include escritura($fcolor:dimgray,$fsize:15px,$pad:5px,$line:20px);
+       vertical-align: top;
+       margin: 0;
+     }*/
+  }
+
+  .lateral, .principal {
+    display: inline-block;
+  }
+
+  .principal {
+    float: right;
+    width: 70%;
+    height: 100%;
+  }
+  .principal .arriba {
     width: 100%;
+    display: inline-flex;
+  }
+  .principal .arriba .informacion1 {
+    width: 100%;
+    padding-left: 10px;
+  }
+  .principal .arriba .informacion1 .inf {
+    width: 100%;
+  }
+  .principal .arriba .informacion1 .inf p {
+    padding: 0;
+    margin: 0;
+  }
+  .principal .arriba .informacion1 .muestra {
+    width: 100%;
+    margin: 8px 0;
+  }
+  .principal .medio {
+    width: 100%;
+    padding-left: 10px;
+  }
+  .principal .medio .consolas {
+    width: 100%;
+  }
+  .principal .medio .consolas .tipo-consola {
+    width: 49%;
+    margin: 0;
+  }
+
+  .abajo {
+    width: 100%;
+    padding-left: 10px;
+  }
+  .abajo .otros {
+    width: 100%;
+  }
+  .abajo .otros .tipo-otro {
+    width: 100%;
+  }
+  .abajo .otros .tipo-otro .logo-otro {
+    width: 100%;
+    min-width: 50%;
+  }
+  .abajo .otros .tipo-otro .descripcion-otro {
+    width: 100%;
+    margin: 0;
+    padding: 0 8px;
   }
 }
 
